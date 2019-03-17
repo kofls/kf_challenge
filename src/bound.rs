@@ -1,25 +1,18 @@
-// enum Bounds {
-//     Rectangle(Rectangle),
-//     Other,
-// }
+#[derive(Debug)]
+pub enum Bound {
+    Rectangle(RectangleBound),
+    Other,
+}
 
-// struct Rectangle {
-//     x_half_bound: f64,
-//     y_half_bound: f64,
-// }
+#[derive(Debug)]
+pub struct RectangleBound {
+    // These are local half bound values from the center of the plane
+    pub x_half_bound: f64,
+    pub y_half_bound: f64,
+}
 
-// impl Rectangle {
-//     pub fn new(x_half_bound: f64, y_half_bound: f64) -> Self{
-//         Rectangle {x_half_bound, y_half_bound}
-//     }
-// }
-
-
-// fn new(bound: Bounds) -> Bounds{
-//     match bounds {
-//         Bounds::Rectangle => {},
-//         _ => {
-//             unimplemented!();
-//         }
-//     }
-// }
+impl RectangleBound {
+    pub fn new(x_half_bound: f64, y_half_bound: f64) -> Bound{
+        Bound::Rectangle(RectangleBound {x_half_bound, y_half_bound})
+    }
+}
