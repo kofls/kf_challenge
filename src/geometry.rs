@@ -31,9 +31,9 @@ impl PlaneSurface {
                 };
         let v = t.cross(u);
         
-        let basis = Mat3::from(u[0], v[0], t[0],
-                                u[1], v[1], t[1],
-                                u[2], v[2], t[2]);
+        let basis = Mat3::from(t[0], u[0], v[0],
+                                t[1], u[1], v[1],
+                                t[2], u[2], v[2]);
 
         let affine = Affine3::from(basis, center);
         let affine_inverse = affine.inverse();
