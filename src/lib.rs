@@ -1,4 +1,4 @@
-use vecmat::{vec::Vec2, vec::Vec3, vec::Vec4, mat::Mat3, map::Affine3};
+use vecmat::vec::Vec3;
 use approx::abs_diff_eq;
 use std::f64;
 

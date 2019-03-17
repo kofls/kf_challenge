@@ -1,7 +1,7 @@
 #[derive(Debug)]
 pub enum Bound {
     Rectangle(RectangleBound),
-    Other,
+    Other, // Can be extended to use other types of bounds
 }
 
 #[derive(Debug)]

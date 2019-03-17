@@ -1,4 +1,6 @@
-use vecmat::{vec::Vec2, vec::Vec3, vec::Vec4, mat::Mat3, map::Affine3};
+// This module is an abstraction over the vector operations and
+// affine transform methods provided by the vecmat library.
+use vecmat::{vec::Vec3, mat::Mat3, map::Affine3};
 
 pub fn translate(x: Vec3<f64>, trans: Vec3<f64>) -> Vec3<f64>{
     x + trans
