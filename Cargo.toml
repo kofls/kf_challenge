@@ -1,0 +1,9 @@
+[package]
+name = "kf_challenge"
+version = "0.1.0"
+authors = ["Surya Midatala <surya.midatala@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+vecmat = "0.4"
+approx = "0.3"
